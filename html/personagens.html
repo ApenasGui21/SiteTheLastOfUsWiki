@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TLoU Wiki</title>
+    <link rel="icon" type="imagem/png" href="../img/tlouicon.webp" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/0df3877aef.js" crossorigin="anonymous"></script>
+
+    <!-- Progress Bar -->
+    <script src="../js/progressbar.min.js"></script>
+
+    <!-- Parallax -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Outros arquivos -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/scripts_pers.js"></script>
+</head>
+
+
+<body>
+  
+  <!-- Menu -->
+  <header>
+    <div class="container" id="nav-container">
+      <!-- add essa class -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <a class="navbar-brand" href="../index.html" style="font-size: 30px;">
+          <img id="logo" src="../img/tlouicon.webp" alt="hDC Agency"> The Last Wiki of Us
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="../index.html">Página Principal</a>
+            <a class="nav-item nav-link" href="jogabilidade.html">Jogabilidade</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Roboto', sans-serif; font-size: 20px; color: #4bbe2e;">
+                      Personagens
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="nav-item nav-link" id="-menu" href="#">Filtro de Personagens</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            <a class="nav-item nav-link" id="outro-site-Part2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">TLoU Part 2</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">The Last of Us Part 2?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>O criador desse site se recusa a fazer um site de wiki sobre um jogo ruim!</p>
+              <span>Agradeço pela compreensão!</span>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Compreensível</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ta certíssimo!</button>
+          </div>
+          </div>
+      </div>
+    </div>
+      
+  </header>
+
+  <main>
+    <!-- Ambientes -->
+    <div id="portfolio-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 style="margin-top: 90px;" class="main-title">Personagens de The Last of Us</h3>
+            <hr>
+          </div>
+
+          <div class="col-md-12" role="group" id="filter-btn-box" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check filter-btn" id="pri-btn" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="pri-btn">Principais</label>
+          
+            <input type="checkbox" class="btn-check filter-btn" id="ali-btn" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="ali-btn">Aliados</label>
+          
+            <input type="checkbox" class="btn-check filter-btn" id="ini-btn" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="ini-btn">Inimigos</label>
+
+            <input type="checkbox" class="btn-check filter-btn" id="hum-btn" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="hum-btn">Humanos</label>
+
+            <input type="checkbox" class="btn-check filter-btn" id="inf-btn" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="inf-btn">Infectados</label>
+          </div>
+
+          <!-- PRINCIPAL - ALIADO - INIMIGO - HUMANO - INFECTADOS -->
+
+          <div class="card col-md-4 pers_card project-box pri-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Joel2.jpg" class="card-img-top" alt="JOEL">
+            <div class="card-body">
+              <h5 class="card-title">Joel Miller</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  Protagonista do jogo, possui uma personalidade forte e é um contrabandista no mundo pós apocaliptico, no qual recebe o papel de levar Ellie para uma base dos Vagalumes. Com ela, cria uma ligação muito forte de pai e filha. <br> Tem 51 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box pri-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Ellie2.jpg" class="card-img-top" alt="ELLIE">
+            <div class="card-body">
+              <h5 class="card-title">Ellie Willians</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                  É imune à infecção, carismática e alegre. Adora ler quadrinhos e está tentando chegar aos vagalumes, para que eles consigam achar a cura com a imunidade dela. <br> Tem 14 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ali-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Tess1.jpg" class="card-img-top" alt="Tess">
+            <div class="card-body">
+              <h5 class="card-title">Tess</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                  Uma endurecida sobrevivente, ela era a "parceira" de longo prazo de Joel. A dupla ganhava a vida como contrabandistas. Ela tinha uma filosofia de "cachorro-come-cachorro". <br> Tem entre 38 - 42 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ali-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Bill1.jpg" class="card-img-top" alt="BILL">
+            <div class="card-body">
+              <h5 class="card-title">Bill</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample4">
+                <div class="card card-body">
+                  Homem amargo que mora sozinho em uma cidade do interior, na qual armou diversas armadilhas, tanto para os mortos quanto para os vivos. <br> Tem entre 35-40 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Sarah1.jpg" class="card-img-top" alt="Sarah">
+            <div class="card-body">
+              <h5 class="card-title">Sarah Miller</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls="multiCollapseExample5">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample5">
+                <div class="card card-body">
+                  Filha de Joel, apesar de não aparecer muito durante o jogo, mostra que tinha uma ótima relação com seu pai. <br> Tem 14 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ali-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Tommy3.webp" class="card-img-top" alt="Tommy">
+            <div class="card-body">
+              <h5 class="card-title">Tommy Miller</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample7" role="button" aria-expanded="false" aria-controls="multiCollapseExample7">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample7">
+                <div class="card card-body">
+                  Irmão de Joel, os dois se mantiveram juntos para sobreviverem ao início da pandemia, mas se separaram depois por pensarem diferente. Fazia parte dos vagalumes. <br> Tem 40 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ini-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Marlene1.webp" class="card-img-top" alt="Marlene">
+            <div class="card-body">
+              <h5 class="card-title">Marlene</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample6" role="button" aria-expanded="false" aria-controls="multiCollapseExample6">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample6">
+                <div class="card card-body">
+                  Líder dos rebeldes Vagalumes, ela que contratou Joel e Tess para levarem Ellie para uma base de seu grupo. <br> Tem 35 - 40 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ini-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/David2.webp" class="card-img-top" alt="David">
+            <div class="card-body">
+              <h5 class="card-title">David</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample8" role="button" aria-expanded="false" aria-controls="multiCollapseExample8">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample8">
+                <div class="card card-body">
+                  Líder de um grupo de sobreviventes canibalistas, ele ameaça os personagens principais da trama. <br> Tem entre 45 - 50 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ali-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Henry2.png" class="card-img-top" alt="Henry">
+            <div class="card-body">
+              <h5 class="card-title">Henry</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample9" role="button" aria-expanded="false" aria-controls="multiCollapseExample9">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample9">
+                <div class="card card-body">
+                  Um sobrevivente bem preparado para largar coisas que não eram essenciais para a sobrevivência, ele é uma pessoa muito carismática e super protetor com seu irmão mais novo Sam. <br> Tem 25 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ali-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Sam2.png" class="card-img-top" alt="Sam">
+            <div class="card-body">
+              <h5 class="card-title">Sam</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample10" role="button" aria-expanded="false" aria-controls="multiCollapseExample10">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample10">
+                <div class="card card-body">
+                  Irmão de Henry, Sam é uma criança assustada, mas capaz de se defender quando necessário. <br> Tem 13 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ali-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Riley1.webp" class="card-img-top" alt="Riley">
+            <div class="card-body">
+              <h5 class="card-title">Riley Abel</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample11" role="button" aria-expanded="false" aria-controls="multiCollapseExample11">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample11">
+                <div class="card card-body">
+                  Amiga de Ellie, ela sentia aversão aos militares e era favorável aos Vaga-lumes, tanto que se junta a eles. <br> Tem 16 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ali-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Maria1.webp" class="card-img-top" alt="Maria">
+            <div class="card-body">
+              <h5 class="card-title">Maria</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample12" role="button" aria-expanded="false" aria-controls="multiCollapseExample12">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample12">
+                <div class="card card-body">
+                  Esposa do Tommy, ela que comanda a comunidade de Jackson. <br> Tem entre 35 - 40 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ini-foto hum-foto" style="width: 18rem;">
+            <img src="../img/personagens/Robert1.webp" class="card-img-top" alt="Robert">
+            <div class="card-body">
+              <h5 class="card-title">Robert</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample13" role="button" aria-expanded="false" aria-controls="multiCollapseExample13">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample13">
+                <div class="card card-body">
+                  Contrabandista de armas e concorrente de Joel e Tess. <br> Tem 40 anos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box inf-foto" style="width: 18rem;">
+            <img src="../img/personagens/Clicker1.jpg" class="card-img-top" alt="Estalador">
+            <div class="card-body">
+              <h5 class="card-title">Estalador</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample14" role="button" aria-expanded="false" aria-controls="multiCollapseExample14">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample14">
+                <div class="card card-body">
+                  Infectado mais conhecido do jogo, sendo seu estalado a sua marca registrada. <br>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box inf-foto" style="width: 18rem;">
+            <img src="../img/personagens/Baiacu1.webp" class="card-img-top" alt="Baiacu">
+            <div class="card-body">
+              <h5 class="card-title">Baiacu</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample15" role="button" aria-expanded="false" aria-controls="multiCollapseExample15">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample15">
+                <div class="card card-body">
+                  Infectado extremamente perigoso, que aguenta muita dano, e que mata suas vítimas com extrema violência. <br>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 pers_card project-box ali-foto" style="width: 18rem;">
+            <img src="../img/personagens/Callus2.png" class="card-img-top" alt="Callus">
+            <div class="card-body">
+              <h5 class="card-title">Callus</h5>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample16" role="button" aria-expanded="false" aria-controls="multiCollapseExample16">Mostrar Mais</a>
+              <div class="collapse multi-collapse" id="multiCollapseExample16">
+                <div class="card card-body">
+                  Cavalo que Ellie e Joel cavalgam, tendo sido carinhosamente nomeado por Ellie. <br>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+
+
+    <!-- Rodapé -->
+  <footer>
+    <div id="copy-area">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <p>Desenvolvido por Guilherme Ginack com ajuda de HdCagency &copy; 2022</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
